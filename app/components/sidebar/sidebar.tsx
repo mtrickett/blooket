@@ -8,7 +8,7 @@ const Sidebar = () => {
       <div className={styles.logo}>
         <Image
           src="https://ac.blooket.com/dashboard/assets/Blooket-M6jYh_hk.png"
-          alt="Blooket"
+          alt="Blooket logo"
           width="168"
           height="43"
         />

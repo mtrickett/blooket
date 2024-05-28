@@ -1,9 +1,11 @@
 import "./globals.css";
 
-import { Inter } from "next/font/google";
 import type { Metadata } from "next";
+import { Nunito } from "next/font/google";
+import Profile from "./components/profile/profile";
+import Sidebar from "./components/sidebar/sidebar";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Set Creator | Blooket",
@@ -17,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={nunito.className}>
+        <Sidebar />
+        <Profile />
+        {children}
+      </body>
     </html>
   );
 }

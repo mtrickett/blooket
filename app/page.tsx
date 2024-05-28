@@ -1,10 +1,9 @@
-import Sidebar from "./components/sidebar/sidebar";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function Create() {
   return (
     <main className={styles.main}>
-      <Sidebar />
+      <h1>Question Set Creator</h1>
     </main>
   );
 }
