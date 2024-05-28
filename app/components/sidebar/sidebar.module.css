@@ -1,0 +1,41 @@
+.sidebar {
+  background-color: #9a49aa;
+  box-shadow: inset 0 -6px #0003;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  padding: 0 15px 6px;
+
+  @media (min-width: 850px) {
+    box-shadow: inset -10px 0 #0003;
+    width: 220px;
+    height: 100%;
+    padding: 20px 10px 20px 0;
+  }
+}
+
+.logo {
+  width: 100%;
+  text-align: left;
+  margin-top: 5px;
+
+  @media (min-width: 850px) {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.hamburger {
+  display: inline-block;
+  width: 30px;
+  margin-top: 10px;
+
+  @media (min-width: 850px) {
+    display: none;
+  }
+}
