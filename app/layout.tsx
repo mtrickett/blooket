@@ -1,11 +1,23 @@
 import "./globals.css";
 
+import { Nunito, Roboto } from "next/font/google";
+
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
 import Profile from "./components/profile/profile";
 import Sidebar from "./components/sidebar/sidebar";
 
-const nunito = Nunito({ subsets: ["latin"] });
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  display: "swap",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-roboto",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Set Creator | Blooket",
@@ -19,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={`${nunito.variable} ${roboto.variable}`}>
         <Sidebar />
         <Profile />
         {children}
