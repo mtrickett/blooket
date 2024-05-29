@@ -1,6 +1,6 @@
-const Dropdown = ({ options }) => {
+const Dropdown = ({ name, value, options, onChange }) => {
   return (
-    <select>
+    <select name={name} value={value} onChange={onChange}>
       {options &&
         options.map((option) => (
           <option key={option.value} value={option.value}>

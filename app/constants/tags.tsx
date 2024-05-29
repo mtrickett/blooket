@@ -1,17 +1,17 @@
 export const grades = [
-  { value: "all", label: "All ages" },
-  { value: "first", label: "1st Grade" },
-  { value: "second", label: "2nd Grade" },
-  { value: "third", label: "3rd Grade" },
-  { value: "fourth", label: "4th Grade" },
-  { value: "fifth", label: "5th Grade" },
-  { value: "sixth", label: "6th Grade" },
-  { value: "seventh", label: "7th Grade" },
-  { value: "eighth", label: "8th Grade" },
-  { value: "nineth", label: "9th Grade" },
-  { value: "tenth", label: "10th Grade" },
-  { value: "eleventh", label: "11th Grade" },
-  { value: "tweleveth", label: "12th Grade" },
+  { value: "all-ages", label: "All ages" },
+  { value: "first-grade", label: "1st Grade" },
+  { value: "second-grade", label: "2nd Grade" },
+  { value: "third-grade", label: "3rd Grade" },
+  { value: "fourth-grade", label: "4th Grade" },
+  { value: "fifth-grade", label: "5th Grade" },
+  { value: "sixth-grade", label: "6th Grade" },
+  { value: "seventh-grade", label: "7th Grade" },
+  { value: "eighth-grade", label: "8th Grade" },
+  { value: "nineth-grade", label: "9th Grade" },
+  { value: "tenth-grade", label: "10th Grade" },
+  { value: "eleventh-grade", label: "11th Grade" },
+  { value: "tweleveth-grade", label: "12th Grade" },
 ];
 
 export const subjects = [
@@ -26,6 +26,7 @@ export const subjects = [
   { value: "technology", label: "Technology" },
 ];
 
+// Top 10 languages spoken in USA: https://en.wikipedia.org/wiki/Languages_of_the_United_States
 export const languages = [
   { value: "english", label: "English" },
   { value: "spanish", label: "Spanish" },
