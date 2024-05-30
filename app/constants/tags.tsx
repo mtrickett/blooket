@@ -1,5 +1,6 @@
 export const grades = [
-  { value: "all-ages", label: "All ages" },
+  { value: "", label: "---" },
+  { value: "all-ages", label: "All-ages" },
   { value: "first-grade", label: "1st Grade" },
   { value: "second-grade", label: "2nd Grade" },
   { value: "third-grade", label: "3rd Grade" },
@@ -15,6 +16,7 @@ export const grades = [
 ];
 
 export const subjects = [
+  { value: "", label: "---" },
   { value: "trivia", label: "Trivia" },
   { value: "math", label: "Math" },
   { value: "science", label: "Science" },
@@ -28,6 +30,7 @@ export const subjects = [
 
 // Top 10 languages spoken in USA: https://en.wikipedia.org/wiki/Languages_of_the_United_States
 export const languages = [
+  { value: "", label: "---" },
   { value: "english", label: "English" },
   { value: "spanish", label: "Spanish" },
   { value: "chinese", label: "Chinese" },

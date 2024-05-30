@@ -24,6 +24,7 @@ a {
 h1,
 h2 {
   font-family: var(--font-nunito);
+  display: inline-block;
 }
 
 h1 {
@@ -40,4 +41,27 @@ h2 {
   @media (min-width: 850px) {
     font-size: 24px;
   }
+}
+
+input:not([type="checkbox"]),
+textarea,
+select {
+  font-family: var(--font-roboto);
+  resize: none;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  height: 40px;
+  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%),
+    0 1px 1.5px 0 rgb(0 0 0 / 5%);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid rgb(11, 194, 207);
+  border-radius: 4px;
 }
