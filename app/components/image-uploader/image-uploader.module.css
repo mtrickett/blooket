@@ -1,11 +1,48 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
+  height: auto;
   aspect-ratio: 4/3;
   border: 2px dashed rgb(11, 194, 207);
   background-color: rgb(11 194 207 / 10%);
   border-radius: 10px;
+  text-align: center;
+}
+
+.container p {
+  color: #088d97;
+}
+
+.label {
+  font-size: 18px;
+  margin-bottom: 5%;
+}
+
+.icon {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 .button {
-  background-color: rgb(11, 194, 207);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin: 10px 5px 0px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #088d97;
+  transition: filter 0.25s;
+}
+
+.button:hover {
+  filter: brightness(110%);
+}
+
+.button:active {
+  filter: none;
 }

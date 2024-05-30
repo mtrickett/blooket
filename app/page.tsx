@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import Button from "./components/button/button";
 import Dropdown from "./components/dropdown/dropdown";
 import ImageUploader from "./components/image-uploader/image-uploader";
-import RightArrow from "./components/icons/right-arrow";
-import Spinner from "./components/icons/spinner";
+import Toggle from "./components/toggle/toggle";
 import styles from "./page.module.css";
 import tags from "./constants/tags";
 import { user } from "./constants/mock-data";
@@ -23,12 +23,12 @@ export default function Create() {
 
   const timerRef = useRef(null);
 
-  const handleChange = (e) => {
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleToggle = (e) => {
+  const handleToggle: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     const { name } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -70,7 +70,7 @@ export default function Create() {
       //   Private: ${formData.private}
       //   Tags: ${formData.grade}, ${formData.subject}, ${formData.language}
       // `);
-    }, 1500);
+    }, 5000);
   };
 
   useEffect(() => {
@@ -84,18 +84,24 @@ export default function Create() {
         <form>
           <div className={styles.container}>
             <div className={styles.header}>
-              <h2>Create New</h2>
-              <label>
-                Private
-                <input
-                  className={styles.checkbox}
-                  type="checkbox"
-                  name="private"
-                  defaultChecked={false}
-                  value={`${formData.private}`}
-                  onChange={handleToggle}
-                />
-              </label>
+              <h2>Create New Set</h2>
+              <div className={styles.toggle}>
+                <label>
+                  <Toggle
+                    checked={formData.private}
+                    handleToggle={handleToggle}
+                  />
+                  {formData.private ? (
+                    <p>
+                      Private <span>(Playable by only you)</span>
+                    </p>
+                  ) : (
+                    <p>
+                      Public <span>(Playable by everyone)</span>
+                    </p>
+                  )}
+                </label>
+              </div>
             </div>
             <div className={`${styles.section} ${styles.half}`}>
               <ImageUploader />
@@ -104,11 +110,10 @@ export default function Create() {
               <label>
                 <p className={styles.label}>Title *</p>
                 <input
-                  className={styles.input}
                   type="text"
                   name="title"
                   value={formData.title}
-                  placeholder={`My New Set by ${user.name}`}
+                  placeholder={`New Set for ${user.name}'s class`}
                   onChange={handleChange}
                   required={true}
                 />
@@ -163,9 +168,13 @@ export default function Create() {
               </label>
             </div>
           </div>
-          <button type="submit" onClick={handleSubmit}>
-            Create {loading ? <Spinner /> : <RightArrow />}
-          </button>
+          <div className={styles.submit}>
+            <Button
+              handleSubmit={handleSubmit}
+              isLoading={loading}
+              text={"Create"}
+            />
+          </div>
         </form>
       </div>
     </main>

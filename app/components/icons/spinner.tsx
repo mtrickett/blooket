@@ -1,6 +1,10 @@
 const Spinner = ({ fill = "#fff" }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      className="spin-pulse"
+    >
       {/* !Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. */}
       <path
         fill={fill}

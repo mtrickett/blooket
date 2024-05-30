@@ -65,3 +65,22 @@ select:focus {
   border: 2px solid rgb(11, 194, 207);
   border-radius: 4px;
 }
+
+/* Spin animation for 'app/components/icons/spinner.tsx' */
+
+@keyframes spin-pulse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.spin-pulse {
+  animation-direction: normal;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: spin-pulse;
+  animation-timing-function: steps(8);
+}

@@ -35,8 +35,12 @@
 
 .header {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   @media (min-width: 850px) {
-    margin-bottom: 12px;
+    flex-direction: row;
   }
 }
 
@@ -62,6 +66,24 @@
   margin-bottom: 10px;
 }
 
+.toggle {
+  background: #f7f7f7;
+  padding: 4px 8px;
+  margin: -7px 0px -5px;
+  border-radius: 5px;
+}
+
+.toggle label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 186px;
+}
+
+.toggle label > p {
+  margin-left: 10px;
+}
+
 .textareaParent {
   /* textarea size is relative to parent, this is needed for full height */
   height: 100%;
@@ -73,4 +95,10 @@
   @media (min-width: 850px) {
     height: calc(100% - 30px);
   }
+}
+
+.submit {
+  width: 100%;
+  margin: 20px 0;
+  text-align: right;
 }
