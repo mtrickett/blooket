@@ -1,6 +1,7 @@
 export const grades = [
   { value: "", label: "---" },
   { value: "all-ages", label: "All-ages" },
+  { value: "kindergarten", label: "Kindergarten" },
   { value: "first-grade", label: "1st Grade" },
   { value: "second-grade", label: "2nd Grade" },
   { value: "third-grade", label: "3rd Grade" },

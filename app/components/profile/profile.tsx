@@ -8,7 +8,9 @@ const Profile = () => {
     <div className={styles.profile}>
       <Image src={user.image} alt={user.blook} width={30} height={35} />
       <p>{user.name}</p>
-      <DownArrow />
+      <span className={styles.arrow}>
+        <DownArrow />
+      </span>
     </div>
   );
 };

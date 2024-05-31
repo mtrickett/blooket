@@ -3,7 +3,13 @@ import Spinner from "../icons/spinner";
 import styles from "./button.module.css";
 import { titan } from "../../fonts";
 
-const Button = ({ handleSubmit, isLoading, text = "Submit" }) => {
+type ButtonProps = {
+  handleSubmit: React.MouseEventHandler;
+  isLoading: boolean;
+  text?: string;
+};
+
+const Button = ({ handleSubmit, isLoading, text = "Submit" }: ButtonProps) => {
   return (
     <button
       className={styles.button}

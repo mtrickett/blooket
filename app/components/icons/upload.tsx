@@ -1,4 +1,4 @@
-const UploadCloud = ({ fill = "#fff" }) => {
+const Upload = ({ fill = "#0bc2cf" }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
       {/* !Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. */}
@@ -10,4 +10,4 @@ const UploadCloud = ({ fill = "#fff" }) => {
   );
 };
 
-export default UploadCloud;
+export default Upload;

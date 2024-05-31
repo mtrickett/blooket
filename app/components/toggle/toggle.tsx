@@ -1,6 +1,11 @@
 import styles from "./toggle.module.css";
 
-const Toggle = ({ checked, handleToggle }) => {
+type ToggleProps = {
+  checked: boolean;
+  handleToggle: React.ChangeEventHandler;
+};
+
+const Toggle = ({ checked, handleToggle }: ToggleProps) => {
   return (
     <div className={styles.toggle}>
       <input

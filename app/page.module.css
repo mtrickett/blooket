@@ -85,7 +85,7 @@
 }
 
 .toggle p > span {
-  color: #757575;
+  color: var(--gray);
 }
 
 .textareaParent {

@@ -1,10 +1,11 @@
 :root {
   --max-width: 1200px;
 
-  --white: rgb(255, 255, 255);
-
+  --red: #dc2626;
   --blue: rgb(11, 194, 207);
-  --blue-dark: rgb(11 194 207 / 10%);
+  --blue-light: rgb(11 194 207 / 6%);
+  --blue-dark: rgb(17, 136, 145);
+  --purple: #9a49aa;
 
   --gray: #757575;
   --gray-light: #e1e1e1;
@@ -12,9 +13,8 @@
   --gray-background: #f7f7f7;
   --gray-shadow: rgba(0, 0, 0, 0.2);
 
-  --red: #dc2626;
-
-  --purple: #9a49aa;
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0, 0);
 }
 
 * {

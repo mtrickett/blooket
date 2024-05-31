@@ -10,7 +10,16 @@ import tags from "./constants/tags";
 import { useState } from "react";
 import { user } from "./constants/mock-data";
 
-const defaultSetData = {
+type formData = {
+  title: string;
+  description?: string;
+  private: boolean;
+  grade?: string;
+  subject?: string;
+  language?: string;
+};
+
+const defaultFornData = {
   title: "",
   description: "",
   private: false,
@@ -22,9 +31,11 @@ const defaultSetData = {
 export default function Create() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [formData, setFormData] = useState(defaultSetData);
+  const [formData, setFormData] = useState(defaultFornData);
 
-  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const handleChange: React.ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -33,11 +44,11 @@ export default function Create() {
     const { name } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: !prev[name],
+      [name]: !(prev as any)[name],
     }));
   };
 
-  const handleSubmit: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const handleSubmit: React.MouseEventHandler<HTMLInputElement> = (e) => {
     e.preventDefault();
 
     const newError = validate(formData);
@@ -48,33 +59,31 @@ export default function Create() {
       return;
     }
 
-    // hit "api" with request data
-    // fetch("/", {
-    //   method: "POST",
-    //   body: JSON.stringify(formData),
-    //   headers: {
-    //     "Content-type": "application/json; charset=UTF-8",
-    //   },
-    // });
-
-    // pretending to load for a bit...
     setLoading(true);
-    console.log(formData);
 
-    window.setTimeout(() => {
-      setLoading(false);
-      setFormData(defaultSetData);
-      // alert(`Succesfully created 🎉
-      //   Title: ${formData.title}
-      //   Description: ${formData.description}
-      //   Author: ${user.name}
-      //   Private: ${formData.private}
-      //   Tags: ${formData.grade}, ${formData.subject}, ${formData.language}
-      // `);
-    }, 5000);
+    const requestData = JSON.stringify(formData);
+
+    // hit api with request data
+    fetch("/api/create", {
+      method: "POST",
+      body: requestData,
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    }).then(() => {
+      // pretending to load for a bit...
+      window.setTimeout(() => {
+        alert(`Succesfully created 🎉
+        ${requestData}`);
+
+        // reset state
+        setLoading(false);
+        setFormData(defaultFornData);
+      }, 2000);
+    });
   };
 
-  const validate = (data) => {
+  const validate = (data: formData): string => {
     if (!data.title.trim()) {
       return "Required";
     }
@@ -117,7 +126,7 @@ export default function Create() {
                   type="text"
                   name="title"
                   value={formData.title}
-                  placeholder={`New Set for ${user.name}'s class`}
+                  placeholder={`New set for ${user.name}'s class`}
                   onChange={handleChange}
                   required={true}
                   disabled={loading}

@@ -1,4 +1,4 @@
-import UploadCloud from "../icons/upload-cloud";
+import Upload from "../icons/upload";
 import styles from "./image-uploader.module.css";
 
 const ImageUploader = () => {
@@ -6,10 +6,10 @@ const ImageUploader = () => {
     <div className={styles.container}>
       <span className={styles.label}>Cover Image</span>
       <div className={styles.icon}>
-        <UploadCloud />
+        <Upload />
       </div>
       <div>
-        <p>Drag and Drop or</p>
+        <p>Drop files here or</p>
         <button className={styles.button} type="button">
           Image gallery
         </button>
