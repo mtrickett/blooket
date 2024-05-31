@@ -1,0 +1,111 @@
+:root {
+  --max-width: 1200px;
+
+  --red: #dc2626;
+  --blue: rgb(11, 194, 207);
+  --blue-light: rgb(11 194 207 / 6%);
+  --blue-dark: rgb(17, 136, 145);
+  --purple: #9a49aa;
+
+  --gray: #757575;
+  --gray-light: #e1e1e1;
+  --gray-text: #3a3a3a;
+  --gray-background: #f7f7f7;
+  --gray-shadow: rgba(0, 0, 0, 0.2);
+
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--gray-text);
+  background: var(--gray-background);
+  font-family: var(--font-roboto);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: var(--font-nunito);
+  display: inline-block;
+}
+
+h1 {
+  font-size: 24px;
+
+  @media (min-width: 850px) {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+
+  @media (min-width: 850px) {
+    font-size: 24px;
+  }
+}
+
+input:not([type="checkbox"]),
+textarea,
+select {
+  font-family: var(--font-roboto);
+  resize: none;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  height: 40px;
+  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%),
+    0 1px 1.5px 0 rgb(0 0 0 / 5%);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+}
+
+input.error,
+textarea.error,
+select.error {
+  border: 2px solid var(--red);
+}
+
+/* Spin animation for 'app/components/icons/spinner.tsx' */
+
+@keyframes spin-pulse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.spin-pulse {
+  animation-direction: normal;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: spin-pulse;
+  animation-timing-function: steps(8);
+}

@@ -1,0 +1,26 @@
+.profile {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 200px;
+  height: 55px;
+  padding: 0 8px 8px 8px;
+  background-color: var(--purple);
+  border-bottom-left-radius: 10px;
+  box-shadow: inset 0 -8px #0003, 0 0 4px var(--gray-shadow);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--white);
+  column-gap: 10px;
+
+  @media (min-width: 850px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.arrow {
+  width: 14px;
+}
