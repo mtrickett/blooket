@@ -23,9 +23,9 @@ const defaultFornData = {
   title: "",
   description: "",
   private: false,
-  grade: "",
-  subject: "",
-  language: "",
+  grade: tags.grades[0].value,
+  subject: tags.subjects[0].value,
+  language: tags.languages[0].value,
 };
 
 export default function Create() {

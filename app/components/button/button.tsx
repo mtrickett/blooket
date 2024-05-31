@@ -5,11 +5,15 @@ import { titan } from "../../fonts";
 
 type ButtonProps = {
   handleSubmit: React.MouseEventHandler;
-  isLoading: boolean;
+  isLoading?: boolean;
   text?: string;
 };
 
-const Button = ({ handleSubmit, isLoading, text = "Submit" }: ButtonProps) => {
+const Button = ({
+  handleSubmit,
+  isLoading = false,
+  text = "Submit",
+}: ButtonProps) => {
   return (
     <button
       className={styles.button}
