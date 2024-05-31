@@ -6,7 +6,6 @@ const Toggle = ({ checked, handleToggle }) => {
       <input
         type="checkbox"
         name="private"
-        defaultChecked={false}
         value={`${checked}`}
         checked={checked}
         onChange={handleToggle}

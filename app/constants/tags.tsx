@@ -28,18 +28,24 @@ export const subjects = [
   { value: "technology", label: "Technology" },
 ];
 
-// Top 10 languages spoken in USA: https://en.wikipedia.org/wiki/Languages_of_the_United_States
+// Top languages spoken in USA: https://en.wikipedia.org/wiki/Languages_of_the_United_States
 export const languages = [
   { value: "", label: "---" },
   { value: "english", label: "English" },
   { value: "spanish", label: "Spanish" },
-  { value: "chinese", label: "Chinese" },
+  { value: "mandarin", label: "Mandarin" },
+  { value: "cantonese", label: "Cantonese" },
   { value: "tagalog", label: "Tagalog" },
   { value: "vietnamese", label: "Vietnamese" },
   { value: "arabic", label: "Arabic" },
   { value: "french", label: "French" },
   { value: "korean", label: "Korean" },
-  { value: "portuguese", label: "Portuguese" },
+  { value: "russian", label: "Russian" },
+  { value: "creole", label: "Creole" },
+  { value: "hindi", label: "Hindi" },
+  { value: "german", label: "German" },
+  { value: "polish", label: "Polish" },
+  { value: "italian", label: "Italian" },
 ];
 
 export const tags = { grades, subjects, languages };

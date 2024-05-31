@@ -5,14 +5,15 @@
   width: 100%;
   height: auto;
   aspect-ratio: 4/3;
-  border: 2px dashed rgb(11, 194, 207);
-  background-color: rgb(11 194 207 / 10%);
+  border: 2px dashed var(--blue);
+  background-color: var(--blue-dark);
   border-radius: 10px;
   text-align: center;
+  padding: 10px;
 }
 
 .container p {
-  color: #088d97;
+  color: var(--blue);
 }
 
 .label {
@@ -22,8 +23,12 @@
 
 .icon {
   width: 100%;
-  max-width: 200px;
+  max-width: 100px;
   margin: 0 auto;
+
+  @media (min-width: 850px) {
+    max-width: 200px;
+  }
 }
 
 .button {
@@ -34,8 +39,8 @@
   margin: 10px 5px 0px;
   font-size: 16px;
   font-weight: 700;
-  color: #fff;
-  background-color: #088d97;
+  color: var(--white);
+  background-color: var(--blue);
   transition: filter 0.25s;
 }
 

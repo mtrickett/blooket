@@ -1,3 +1,22 @@
+:root {
+  --max-width: 1200px;
+
+  --white: rgb(255, 255, 255);
+
+  --blue: rgb(11, 194, 207);
+  --blue-dark: rgb(11 194 207 / 10%);
+
+  --gray: #757575;
+  --gray-light: #e1e1e1;
+  --gray-text: #3a3a3a;
+  --gray-background: #f7f7f7;
+  --gray-shadow: rgba(0, 0, 0, 0.2);
+
+  --red: #dc2626;
+
+  --purple: #9a49aa;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,8 +30,8 @@ body {
 }
 
 body {
-  color: #3a3a3a;
-  background: #f7f7f7;
+  color: var(--gray-text);
+  background: var(--gray-background);
   font-family: var(--font-roboto);
 }
 
@@ -62,8 +81,14 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border: 2px solid rgb(11, 194, 207);
+  border: 2px solid var(--blue);
   border-radius: 4px;
+}
+
+input.error,
+textarea.error,
+select.error {
+  border: 2px solid var(--red);
 }
 
 /* Spin animation for 'app/components/icons/spinner.tsx' */

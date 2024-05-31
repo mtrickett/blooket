@@ -2,19 +2,9 @@
   position: relative;
   display: inline-block;
   width: 55px;
-  height: 26px;
+  height: 30px;
   border-radius: 5px;
   cursor: pointer;
-  align-self: middle;
-}
-
-.toggle + p {
-  display: inline-block;
-}
-
-.toggle + p > span {
-  font-size: 12px;
-  display: block;
 }
 
 .toggle > input {
@@ -29,7 +19,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e1e1e1;
+  background-color: var(--gray-light);
   border-radius: 5px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -38,11 +28,11 @@
 .toggle > span::after {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
   left: 4px;
   bottom: 4px;
-  box-shadow: inset 0 -3px rgb(11 194 207 / 10%);
+  box-shadow: inset 0 -3px var(--blue-dark);
   background-color: white;
   background-image: url("/lock-open-solid.svg");
   background-size: 14px 14px;
@@ -54,12 +44,12 @@
 }
 
 .toggle input[value="true"] + span {
-  background-color: rgb(11, 194, 207);
+  background-color: var(--blue);
 }
 
 .toggle input[value="true"] + span:after {
   background-image: url("/lock-solid.svg");
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
 }
