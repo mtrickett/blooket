@@ -19,7 +19,7 @@ type formData = {
   language?: string;
 };
 
-const defaultFornData = {
+const defaultFormData = {
   title: "",
   description: "",
   private: false,
@@ -31,7 +31,7 @@ const defaultFornData = {
 export default function Create() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [formData, setFormData] = useState(defaultFornData);
+  const [formData, setFormData] = useState(defaultFormData);
 
   const handleChange: React.ChangeEventHandler<
     HTMLInputElement | HTMLTextAreaElement
@@ -78,7 +78,7 @@ export default function Create() {
 
         // reset state
         setLoading(false);
-        setFormData(defaultFornData);
+        setFormData(defaultFormData);
       }, 2000);
     });
   };
